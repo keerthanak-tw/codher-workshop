@@ -1,0 +1,18 @@
+{
+  "name": "url-shortner-backend",
+  "version": "1.0.0",
+  "description": "URL shortner backend codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --silent"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1066.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
