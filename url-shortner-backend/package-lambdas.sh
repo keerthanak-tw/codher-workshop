@@ -20,12 +20,12 @@ do
   cp dev.env build/babel-src/$lambdaName/.env
   fileSuffix=".lambda.js"
   fileSuffixForArchive=".js"
-  cp build/babel-src/$lambdaName$fileSuffix build/babel-src/$lambdaName/$lambdaName.js
+  cp build/babel-src/$lambdaName$fileSuffix build/babel-src/$lambdaName/index.js
   archiveSuffix=".zip"
   archiveFileName=$lambdaName$fileSuffixForArchive$archiveSuffix
   echo "Zipping $archiveFileName"
   cd build/babel-src/$lambdaName
-  zip -r -q $archiveFileName $lambdaName.js node_modules .env
+  zip -r -q $archiveFileName $lambdaName.js .env
   mv $archiveFileName ../
   cd ../../..
 done

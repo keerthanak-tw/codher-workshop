@@ -17,6 +17,7 @@
 
 <script>
 import axios from "axios";
+const { VUE_APP_API_GATEWAY_URL } = process.env;
 export default {
   name: 'RedirectPage',
   data() {
@@ -26,10 +27,9 @@ export default {
   },
   async created() {
     try {
-      const response = await axios.get(`https://ht9ojaxf3d.execute-api.ap-south-1.amazonaws.com/${this.$route.params.shortId}`);
-      console.log(response);
+      const response = await axios.get(`${VUE_APP_API_GATEWAY_URL}/${this.$route.params.shortId}`);
       if (response.status === 200) {
-        // window.location.href = response.data;
+        window.location.href = response.data;
         this.isRedirectionPossible = true;
       }
       else {

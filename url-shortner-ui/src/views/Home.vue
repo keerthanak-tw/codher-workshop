@@ -45,6 +45,7 @@
 import axios from 'axios';
 import { copyToClipboard } from 'quasar';
 
+const { VUE_APP_API_GATEWAY_URL } = process.env;
 export default {
   name: 'Home',
   data() {
@@ -58,7 +59,7 @@ export default {
       const data = {
         urlToShorten: this.inputUrl
       }
-      const response = await axios.post('https://ht9ojaxf3d.execute-api.ap-south-1.amazonaws.com/shorten', data);
+      const response = await axios.post(`${VUE_APP_API_GATEWAY_URL}/shorten`, data);
       this.shortenedUrl = response.data;
     },
     onReset() {
