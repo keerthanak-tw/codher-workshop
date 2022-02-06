@@ -25,7 +25,7 @@ do
   archiveFileName=$lambdaName$fileSuffixForArchive$archiveSuffix
   echo "Zipping $archiveFileName"
   cd build/babel-src/$lambdaName
-  zip -r -q $archiveFileName $lambdaName.js .env
+  zip -r -q $archiveFileName index.js .env
   mv $archiveFileName ../
   cd ../../..
 done

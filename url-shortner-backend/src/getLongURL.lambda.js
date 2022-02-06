@@ -14,7 +14,7 @@ export const handler = async (event) => {
         S: shortId,
       },
     },
-    TableName: 'some-table',
+    TableName: 'AWSWorkshopDemoTable',
   };
 
   try {

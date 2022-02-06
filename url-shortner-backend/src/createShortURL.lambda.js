@@ -9,7 +9,7 @@ export const handler = async (event) => {
   const { urlToShorten } = JSON.parse(event.body);
   const shortId = uuid();
   const putRequest = {
-    TableName: 'some-table',
+    TableName: 'AWSWorkshopDemoTable',
     Item: {
       PK: {
         S: shortId,
